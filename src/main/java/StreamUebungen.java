@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class StreamUebungen {
 
@@ -11,6 +12,9 @@ public class StreamUebungen {
     };
 
     public static void main(String[] args) {
+
+        Stream.of(lehrerListe).forEach(c -> System.out.println(c));
+
         String lehrerVorname = "Antonio";
         Lehrer lehrer = lehrerListe.stream().filter(c -> c.getLehrerVorname() == lehrerVorname).findFirst().orElse(null);
         System.out.println(lehrer);
