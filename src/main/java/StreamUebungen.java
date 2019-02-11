@@ -12,9 +12,10 @@ public class StreamUebungen {
     };
 
     public static void main(String[] args) {
-
+        lehrerListe.stream().forEach(c -> System.out.println(c));
+        System.out.println();
         Stream.of(lehrerListe).forEach(c -> System.out.println(c));
-
+        System.out.println();
         String lehrerVorname = "Antonio";
         Lehrer lehrer = lehrerListe.stream().filter(c -> c.getLehrerVorname() == lehrerVorname).findFirst().orElse(null);
         System.out.println(lehrer);
